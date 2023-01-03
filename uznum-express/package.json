@@ -5,6 +5,7 @@
   "type": "module",
   "scripts": {
     "start": "nodemon --watch './**/*.ts' --exec 'ts-node-esm' ./src/index.ts",
+    "db:migrate": "ts-node-esm src/db/migrate.ts",
     "build": "tsc"
   },
   "devDependencies": {
