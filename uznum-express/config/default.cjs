@@ -5,5 +5,8 @@ module.exports = {
   },
   "cors": {
     "whitelist": process.env.UZNUM_WHITELISTED_DOMAINS || "http://localhost:3000"
+  },
+  "db": {
+    "fileName": process.env.UZNUM_DB_FILENAME || "./game.db"
   }
 }
