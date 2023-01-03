@@ -3,7 +3,6 @@ import {
   createRouteConfig,
   RouterProvider,
 } from '@tanstack/react-router';
-import Router from './components/Router';
 import GamePage from './pages/GamePage';
 import PlayerStart from './pages/PlayerStart';
 
