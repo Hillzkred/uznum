@@ -4,18 +4,19 @@ import {
   RouterProvider,
 } from '@tanstack/react-router';
 import Router from './components/Router';
-import About from './pages/About';
-import Home from './pages/Home';
+import GamePage from './pages/GamePage';
+import PlayerStart from './pages/PlayerStart';
 
-const rootRoute = createRouteConfig({
-  component: Router,
+const rootRoute = createRouteConfig();
+
+const indexRoute = rootRoute.createRoute({ path: '/', component: PlayerStart });
+
+const gamePageRoute = rootRoute.createRoute({
+  path: '/game',
+  component: GamePage,
 });
 
-const indexRoute = rootRoute.createRoute({ path: '/', component: Home });
-
-const aboutRoute = rootRoute.createRoute({ path: '/about', component: About });
-
-const routeConfig = rootRoute.addChildren([indexRoute, aboutRoute]);
+const routeConfig = rootRoute.addChildren([indexRoute, gamePageRoute]);
 
 const router = createReactRouter({ routeConfig });
 
