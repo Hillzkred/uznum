@@ -1,0 +1,8 @@
+resources:
+  - type: storage.v1.bucket
+    name: uznum-audios
+    properties:
+      location: us-central1
+      storageClass: STANDARD
+      versioning:
+        enabled: true
