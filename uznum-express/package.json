@@ -22,6 +22,7 @@
   "dependencies": {
     "config": "^3.3.8",
     "cors": "^2.8.5",
+    "couchbase": "^3.2.6",
     "esm": "^3.2.25",
     "express": "^4.18.2",
     "socket.io": "^4.5.4",
