@@ -23,9 +23,13 @@ setupCouchbase().then((scope) => {
         res.send('Welcome to Uznum API');
     });
 
-    app.post('/player', async (req, res) => {
+    app.post('/player', (req, res) => {
         validatePlayer(req.body);
-        await playersCollection.upsert(req.body.name, req.body)
+        playersCollection.upsert(req.body.name, req.body).then(() => {
+            res.status(200).send(
+                req.body
+            );
+        });
     });
 
     server.listen(port, () => {
