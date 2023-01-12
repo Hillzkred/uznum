@@ -1,7 +1,9 @@
 import {Link} from '@tanstack/react-router';
 import {ChangeEvent, useState} from "react";
+import {useSocketIo} from "../hooks/useSocketIo";
 
 function PlayerStart() {
+    const socket = useSocketIo();
     const [playerName, setPlayerName] = useState("");
 
     const playerNameHandler = (e: ChangeEvent) => {
@@ -12,6 +14,7 @@ function PlayerStart() {
 
     const playHandler = () => {
         console.log(playerName);
+        socket?.emit("start.game", playerName);
         return true;
     }
     return (
