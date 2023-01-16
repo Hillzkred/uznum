@@ -3,7 +3,7 @@ import express, {Express} from "express";
 import cors from "cors";
 import config from "config";
 import {socketIo} from "./events/socket-io.js";
-import {setupCouchbase} from "./couchbase.js";
+import {setupCouchbase} from "./db/couchbase.js";
 import {validatePlayer} from "./validators/player.validators.js";
 
 const app: Express = express();
