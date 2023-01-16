@@ -1198,10 +1198,10 @@ utils-merge@1.0.1:
   resolved "https://registry.yarnpkg.com/utils-merge/-/utils-merge-1.0.1.tgz#9f95710f50a267947b2ccc124741c1028427e713"
   integrity sha512-pMZTvIkT1d+TFGvDOqodOclx0QWkkgi6Tdoa8gC8ffGAAqz9pzPTZWAybbsHHoED/ztMtkv/VoYTYyShUn81hA==
 
-uznum-events@^1.0.7:
-  version "1.0.7"
-  resolved "https://registry.yarnpkg.com/uznum-events/-/uznum-events-1.0.7.tgz#fd9298291e40fec753bd5b7b4af98f71385af501"
-  integrity sha512-PC4pJpon3SsZQP4QgxyvnxnU6FnzNZKEpON8ncmR/dhFyV8ZmYkSZ0GTP1BfTNj0LiTC06U04e5RRyyYhGJSOA==
+uznum-events@^1.0.9:
+  version "1.0.9"
+  resolved "https://registry.yarnpkg.com/uznum-events/-/uznum-events-1.0.9.tgz#0e6c740982b08746f812b7c6a0aba99be0cb5863"
+  integrity sha512-2sSW91frohH1mKE1DK3A3rOjnbjJKXjkffUmnl+jDdzuOzHqaDKsCE9cuj+ZUW0cgs4iNwjG4AR/rTgarLyi4Q==
 
 v8-compile-cache-lib@^3.0.1:
   version "3.0.1"

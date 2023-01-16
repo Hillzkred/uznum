@@ -1,10 +1,11 @@
 import {Link} from '@tanstack/react-router';
 import {useSocketIo} from "../hooks/useSocketIo";
+import {events} from "uznum-events";
 
 function GamePage() {
     const socket = useSocketIo();
     if (socket) {
-        socket.on("game.started", (data: any) => {
+        socket.on(events.GAME_STATE_UPDATE, (data: any) => {
             console.log(data);
         });
     }
