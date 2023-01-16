@@ -30,24 +30,25 @@ gcloud auth application-default login
 gcloud deployment-manager deployments update uznum-audio-files --config ./cloud/audio-bucket.yml
 ```
 
+### Run couchbase locally
+
+```shell
+docker run -d --name db -p 8091-8097:8091-8097 -p 9123:9123 -p 11207:11207 -p 11210:11210 -p 11280:11280 -p 18091-18097:18091-18097 couchbase
+```
+
 ## Database Model
 
 ### Entities
 
 - Admin
-  - username (unique)
-  - password
+    - username (unique)
+    - password
 - Player
-  - name (unique)
-- Scores
-  - player (FK)
-  - score
+    - name (unique)
+    - scores
 - Sentence
-  - text
-  - audio_href
+    - text
+    - audio_href
 - Game
-  - sentence_id (FK)
-- Guess
-  - game_id (FK)
-  - player_id (FK)
-  - guess
+    - sentence_id (FK)
+    - guesses
