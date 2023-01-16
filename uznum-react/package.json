@@ -12,7 +12,8 @@
     "@tanstack/react-router": "^0.0.1-beta.41",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
-    "socket.io-client": "^4.5.4"
+    "socket.io-client": "^4.5.4",
+    "uznum-events": "^1.0.9"
   },
   "devDependencies": {
     "@types/react": "^18.0.26",

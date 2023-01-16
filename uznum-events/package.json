@@ -1,0 +1,17 @@
+{
+  "name": "uznum-events",
+  "version": "1.0.10",
+  "main": "dist/index.js",
+  "license": "MIT",
+  "private": false,
+  "files": [
+    "dist"
+  ],
+  "devDependencies": {
+    "typescript": "^4.9.4"
+  },
+  "scripts": {
+    "build": "tsc",
+    "publish": "yarn build && npm publish"
+  }
+}
