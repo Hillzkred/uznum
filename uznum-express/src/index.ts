@@ -5,6 +5,7 @@ import config from "config";
 import {socketIo} from "./events/socket-io.js";
 import {setupCouchbase} from "./db/couchbase.js";
 import {validatePlayer} from "./validators/player.validators.js";
+import {setupAuth} from "./auth/auth.js";
 
 const app: Express = express();
 
@@ -31,6 +32,8 @@ setupCouchbase().then((scope) => {
             );
         });
     });
+
+    setupAuth(app, scope);
 
     server.listen(port, () => {
         console.log(`listening on ${port}`);
