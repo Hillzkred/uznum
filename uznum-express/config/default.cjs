@@ -1,4 +1,9 @@
 module.exports = {
+  "auth": {
+    "jwt": {
+        "secret": process.env.UZNUM_SECRET || "uznum-secret"
+    }
+  },
   "server": {
     "host": "localhost",
     "port": process.env.UZNUM_SERVER_PORT || 3001
