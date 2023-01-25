@@ -5,7 +5,17 @@
 
 version: 2
 updates:
-  - package-ecosystem: "" # See documentation for possible values
-    directory: "/" # Location of package manifests
+  - package-ecosystem: "npm"
+    directory: "/uznum-express" # Location of package manifests
+    schedule:
+      interval: "daily"
+      
+  - package-ecosystem: "npm"
+    directory: "/uznum-events" # Location of package manifests
+    schedule:
+      interval: "daily"
+
+  - package-ecosystem: "npm"
+    directory: "/uznum-react" # Location of package manifests
     schedule:
       interval: "daily"
