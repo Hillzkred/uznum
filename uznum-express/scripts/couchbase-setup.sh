@@ -12,7 +12,7 @@ curl -X POST -v -u $UZNUM_DB_USER:$UZNUM_DB_PASSWORD \
 
 curl -X POST -v -u $UZNUM_DB_USER:$UZNUM_DB_PASSWORD \
   "http://$UZNUM_DB_HOST/pools/default/buckets/$UZNUM_DB_BUCKET/scopes/$UZNUM_DB_SCOPE/collections" \
-  -d name=admins
+  -d name=users
 
 curl -X POST -v -u $UZNUM_DB_USER:$UZNUM_DB_PASSWORD \
   "http://$UZNUM_DB_HOST/pools/default/buckets/$UZNUM_DB_BUCKET/scopes/$UZNUM_DB_SCOPE/collections" \

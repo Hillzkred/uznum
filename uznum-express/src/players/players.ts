@@ -1,6 +1,6 @@
 import {Express} from "express";
 import {Scope} from "couchbase";
-import {validatePlayer} from "./player.validators";
+import {validatePlayer} from "./player.validators.js";
 
 export const setupPlayers = (app: Express, scope: Scope) => {
     const playersCollection = scope.collection("players");

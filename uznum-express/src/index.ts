@@ -5,7 +5,7 @@ import config from "config";
 import {socketIo} from "./events/socket-io.js";
 import {setupCouchbase} from "./db/couchbase.js";
 import {setupAuth} from "./auth/auth.js";
-import {setupPlayers} from "./players/players";
+import {setupPlayers} from "./players/players.js";
 
 const app: Express = express();
 

@@ -5,7 +5,7 @@ const userSchema = {
     type: 'object',
     properties: {
         username: {type: 'string'},
-        password: {type: 'array'},
+        password: {type: 'string'},
         role: {type: 'string'}
     },
     required: ['username', 'password', 'role'],
