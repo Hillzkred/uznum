@@ -11,7 +11,7 @@ const schema = yup.object({
         .oneOf([yup.ref('password')], 'Password confirmation does not match')
 }).required();
 
-export function RegistrationForm() {
+export function RegistrationForm({registrationHandler}: { registrationHandler: (username: string, password: string) => void }) {
     const {register, handleSubmit, formState: {errors}} = useForm<{
         username: string;
         password: string;
@@ -21,7 +21,7 @@ export function RegistrationForm() {
     });
 
     const onSubmit = (data: any) => {
-        console.log(data);
+        registrationHandler(data.username, data.password);
     };
 
     return (
