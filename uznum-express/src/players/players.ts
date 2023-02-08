@@ -7,9 +7,13 @@ export const setupPlayers = (app: Express, scope: Scope) => {
 
     app.post('/player', (req, res) => {
         validatePlayer(req.body);
+        const player = {
+            name: req.body.name,
+            scores: req.body.scores
+        };
         playersCollection.upsert(req.body.name, req.body).then(() => {
             res.status(200).send(
-                req.body
+                player
             );
         });
     });

@@ -3,7 +3,7 @@ import {Scope} from "couchbase";
 import bcrypt from "bcrypt";
 import {validateUser} from "./user.validators.js";
 import {ROLES} from "./auth.constants.js";
-import {empty, pipe, prop, either, anyPass, ifElse, always, isEmpty, propSatisfies, isNil} from "ramda";
+import {pipe, prop, either, ifElse, always, isEmpty, propSatisfies, isNil} from "ramda";
 
 export const setupRegister = (app: Express, scope: Scope) => {
     const usersCollection = scope.collection("users");
