@@ -5,6 +5,7 @@ import {
 } from '@tanstack/react-router';
 import GamePage from './pages/GamePage';
 import PlayerStart from './pages/PlayerStart';
+import {RegistrationPage} from "./pages/RegistrationPage";
 
 const rootRoute = createRouteConfig();
 
@@ -15,7 +16,12 @@ const gamePageRoute = rootRoute.createRoute({
   component: GamePage,
 });
 
-const routeConfig = rootRoute.addChildren([indexRoute, gamePageRoute]);
+const registrationPageRoute = rootRoute.createRoute({
+  path: '/register',
+  component: RegistrationPage,
+});
+
+const routeConfig = rootRoute.addChildren([indexRoute, gamePageRoute, registrationPageRoute]);
 
 const router = createReactRouter({ routeConfig });
 
