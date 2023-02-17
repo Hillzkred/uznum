@@ -1,6 +1,6 @@
 import { Link, Outlet } from '@tanstack/react-router';
 
-function Router() {
+export default function Nav() {
   return (
     <div>
       <div className='py-1' />
@@ -17,5 +17,3 @@ function Router() {
     </div>
   );
 }
-
-export default Router;

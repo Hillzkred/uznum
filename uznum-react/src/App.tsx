@@ -1,36 +1,46 @@
 import {
-  createReactRouter,
-  createRouteConfig,
-  RouterProvider,
+    RootRoute,
+    Route,
+    Router,
+    RouterProvider,
 } from '@tanstack/react-router';
 import GamePage from './pages/GamePage';
 import PlayerStart from './pages/PlayerStart';
 import {RegistrationPage} from "./pages/RegistrationPage";
+import Nav from "./components/Nav";
 
-const rootRoute = createRouteConfig();
-
-const indexRoute = rootRoute.createRoute({ path: '/', component: PlayerStart });
-
-const gamePageRoute = rootRoute.createRoute({
-  path: '/game',
-  component: GamePage,
+const rootRoute = new RootRoute({
+    component: Nav
 });
 
-const registrationPageRoute = rootRoute.createRoute({
-  path: '/register',
-  component: RegistrationPage,
+const indexRoute = new Route({
+    getParentRoute: () => rootRoute,
+    path: '/',
+    component: PlayerStart
 });
 
-const routeConfig = rootRoute.addChildren([indexRoute, gamePageRoute, registrationPageRoute]);
+const gamePageRoute = new Route({
+    getParentRoute: () => rootRoute,
+    path: '/game',
+    component: GamePage,
+});
 
-const router = createReactRouter({ routeConfig });
+const registrationPageRoute = new Route({
+    getParentRoute: () => rootRoute,
+    path: '/register',
+    component: RegistrationPage,
+});
+
+const routeTree = rootRoute.addChildren([indexRoute, gamePageRoute, registrationPageRoute]);
+
+const router = new Router({routeTree});
 
 function App() {
-  return (
-    <div>
-      <RouterProvider router={router} />
-    </div>
-  );
+    return (
+        <div>
+            <RouterProvider router={router}/>
+        </div>
+    );
 }
 
 export default App;
