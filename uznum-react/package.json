@@ -16,7 +16,7 @@
     "react-hook-form": "^7.42.1",
     "socket.io-client": "^4.5.4",
     "uznum-events": "^1.0.9",
-    "yup": "^0.32.11"
+    "yup": "^1.1.0"
   },
   "devDependencies": {
     "@types/react": "^18.0.27",
