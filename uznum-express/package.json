@@ -26,7 +26,7 @@
     "bcrypt": "^5.1.0",
     "config": "^3.3.9",
     "cors": "^2.8.5",
-    "couchbase": "^3.2.6",
+    "couchbase": "^4.2.5",
     "esm": "^3.2.25",
     "express": "^4.18.2",
     "jsonwebtoken": "^9.0.0",
